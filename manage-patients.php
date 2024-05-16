@@ -41,7 +41,7 @@ use AfricasTalking\SDK\AfricasTalking;
                 $bloodgroup = $row['blood'];
                 $gender = $row['gender'];
                 $phone = $row['phone'];
-                $guardian = $row['guardian'];
+                $rhythm = $row['rhythm'];
                 $residence = $row['residence'];
                 $count = $count+1;
                 ?>
@@ -52,7 +52,7 @@ use AfricasTalking\SDK\AfricasTalking;
                     <td data-label="identification"><?php echo $identification?></td>
                     <td data-label="phone"><?php echo $phone?></td>
                     <td data-label="residence"><?php echo $residence?></td>
-                    <td data-label="guardian"><?php echo $guardian?></td>
+                    <td data-label="rhythm"><?php echo $rhythm?></td>
                     <?php 
                         $query=mysqli_query($con,"SELECT  role  FROM tbluser WHERE  ID ='$userid' ");
                         $result=mysqli_fetch_array($query);
@@ -95,15 +95,15 @@ use AfricasTalking\SDK\AfricasTalking;
                 <table class="table" id="table">
                     <thead>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>ID Number</th>
-                        <th>Phone Number</th>
-                        <th>Residence</th>
-                        <th>Guardian</th>
+                        <th>Nama</th>
+                        <th>ID Pasien</th>
+                        <th>No. Telepon</th>
+                        <th>Alamat</th>
+                        <th>Rhythm</th>
                         <?php 
                            if($role < 2 ){
                                 ?>
-                        <th>Action</th>
+                        <th>Aksi</th>
                            <?php }?>
                     </thead>
                     <tbody>

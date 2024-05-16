@@ -45,22 +45,22 @@ if (strlen($_SESSION['sessionid']==0))
                     <form action="" method="post" class="form">
                         <p class="form-title">Tambah User</p>
                         <div class="item">
-                            <input type="text" name="name" placeholder="fullname" id="email" class="input" required>
+                            <input type="text" name="name" placeholder="Nama Lengkap" id="email" class="input" required>
                         </div>     
                         <div class="item">    
                             <input type="email" name="email" placeholder="Email" id="email" class="input" required>
                         </div>
                         <div class="item">
-                            <input type="text" name="phone" placeholder="phone" id="phone" class="input" required>
+                            <input type="text" name="phone" placeholder="No.Telepon" id="phone" class="input" required>
                         </div>
                         <div class="item">
-                            <input type="number" placeholder="ID Number" name="id" class="input" required>
+                            <input type="number" placeholder="ID" name="id" class="input" required>
                         </div> 
                         <div class="item">    
                             <input placeholder="Password" name="password" type="password" value="" required="true">                     
                         </div>                                 
                         <div class="item">    
-                            <input type="password"  id="repeatpassword" name="repeatpassword" placeholder="Repeat Password" required="true">
+                            <input type="password"  id="repeatpassword" name="repeatpassword" placeholder="Konfirmasi Password" required="true">
                         </div>
                         <div class="item">    
                             <input type="text"  id="username" name="username" placeholder="usernaname" required="true">

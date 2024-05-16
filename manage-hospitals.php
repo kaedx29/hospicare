@@ -49,15 +49,15 @@
     <?php include 'includes/header.php';?>
         <div class="main-content">
             <div class="title">
-                Hospitals' Records
+                Rekam Rumah Sakit
             </div>
             <div class="main">
                 <a href="hospital-pdf.php" class="right"><button>Export</button> </a>
                 <table class="table">
                     <thead>
                         <th>#</th>
-                        <th>Hospital Name</th>
-                        <th>Reg Number</th>
+                        <th>Nama Rumah Sakit</th>
+                        <th>No. Reg</th>
                         <th>Daerah</th>
                         <th>Action</th>
                     </thead>

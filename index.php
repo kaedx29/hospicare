@@ -25,12 +25,22 @@ if(isset($_POST['login']))
 
 <!DOCTYPE html>
 <html>
+<style>
+	body {
+    margin-bottom: 0px;
+    padding: 0px;
+    background: url('assets/images/WhatsApp Image 2024-05-15 at 21.21.40.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    height: 100vh;
+	}
+</style>
 	<head>
 		<meta charset="utf-8">
 		<title>Login</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
-
 	</head>
 	<body>
 		<div class="login">

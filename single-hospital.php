@@ -15,7 +15,7 @@ else
     while($row = mysqli_fetch_assoc($result)){
         $name = $row['hospital_name'];
         $regNo = $row['reg_number'];
-        $county = $row['subcounty'];
+        $daerah = $row['daerah'];
         // $patientsNo = $row[''];
     }
 
@@ -31,29 +31,29 @@ else
         <?php include 'includes/header.php';?>
         <div class="main-content">
             <div class="title">
-                <?php echo  $name ?> Hospital Information.
+                <?php echo  $name ?> Informasi Rumah Sakit.
             </div>
             <div class="main">
             <div class="widget" style="background-color:    #05A85C">
-					<div class="title" style="background-color: #008C4D; color: #fff">Registration  Number</div>
+					<div class="title" style="background-color: #008C4D; color: #fff">No. Registrasi</div>
 					<i class="fa fa-users fa-5x" style="color: #49DE94"></i>
 					<h1 style="margin-left:50%;   bottom: 50px; right: 5px; color:#28D17C;"><?php echo $regNo; ?></h1>
 				</div> <div class="widget" style="background-color:    #05A85C">
-					<div class="title" style="background-color: #008C4D; color: #fff">Number of Number of Medics</div>
+					<div class="title" style="background-color: #008C4D; color: #fff">Jumlah Tenaga Medis</div>
 					<i class="fa fa-users fa-5x" style="color: #49DE94"></i>
 					<h1 style="margin-left:50%;   bottom: 50px; right: 5px; color:#28D17C;"><?php echo $usersCount; ?></h1>
 				</div><div class="widget" style="background-color:    #05A85C">
-					<div class="title" style="background-color: #008C4D; color: #fff">Current Capacity</div>
+					<div class="title" style="background-color: #008C4D; color: #fff">Kapasitas saat ini</div>
 					<i class="fa fa-users fa-5x" style="color: #49DE94"></i>
 					<h1 style="margin-left:50%;   bottom: 50px; right: 5px; color:#14D17C;"><?php echo $patientsCount; ?></h1>
 				</div>
             <div class="profile">
                     <div class="patient-info">
                         <div class="info-one">
-                            <h4>Name: <p><?php echo $name;?></p></h4>
-                            <h4>RegNo: <p><?php echo $regNo;?></p></h4>
-                            <h4>County: <p ><?php echo $county;?></p></h4>                         
-                            <h4>Capacity: <p><?php echo $patientsCount;?></p></h4>
+                            <h4>Nama: <p><?php echo $name;?></p></h4>
+                            <h4>No. Reg: <p><?php echo $regNo;?></p></h4>
+                            <h4>Daerah: <p ><?php echo $daerah;?></p></h4>                         
+                            <h4>Kapasitas: <p><?php echo $patientsCount;?></p></h4>
                         </div>
                     </div>
                 </div>

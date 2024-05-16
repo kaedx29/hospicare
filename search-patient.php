@@ -43,7 +43,7 @@
                 $bloodgroup = $row['blood'];
                 $gender = $row['gender'];
                 $phone = $row['phone'];
-                $guardian = $row['guardian'];
+                $rhythm = $row['rhythm'];
                 $residence = $row['residence'];
                 $count = $count+1;
                 ?>
@@ -54,7 +54,7 @@
                     <td data-label="identification"><?php echo $identification?></td>
                     <td data-label="phone"><?php echo $phone?></td>
                     <td data-label="residence"><?php echo $residence?></td>
-                    <td data-label="guardian"><?php echo $guardian?></td>
+                    <td data-label="rhythm"><?php echo $rhythm?></td>
                     <td data-label="action"><a href="single-patient.php?patient_id=<?php echo $id; ?>"><button style="padding:5px;">View</button></a></td>
                 </tr>   
                 
@@ -79,12 +79,12 @@
                 <table class="table">
                     <thead>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>ID Number</th>
-                        <th>Phone Number</th>
-                        <th>Residence</th>
-                        <th>Guardian</th>
-                        <th>Action</th>
+                        <th>Nama</th>
+                        <th>ID Pasien</th>
+                        <th>Nomor Telepon</th>
+                        <th>Alamat</th>
+                        <th>Nama Perawat</th>
+                        <th>Aksi</th>
                     </thead>
                     <tbody>
                         <?php              

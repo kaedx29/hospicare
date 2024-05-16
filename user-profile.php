@@ -30,7 +30,7 @@ if (strlen($_SESSION['sessionid']==0))
     <?php include 'includes/header.php';?>
 		<div class="main-content">
 			<div class="title">
-				User Profile
+				Profil User
 			</div>
 			<div class="main"> 
                 <div class="form-container">
@@ -43,9 +43,9 @@ if (strlen($_SESSION['sessionid']==0))
                         {
                         ?>
                             <form role="form" method="post" action="" class="form">
-                                <p class="form-title">Your Profile</p>
+                                <p class="form-title">Profil</p>
                                 <div class="item">
-                                    <label for="Fullname">Fullname:</label>
+                                    <label for="Fullname">Nama Lengkap:</label>
                                     <input type="text" name="fullname" value="<?php echo $row['FullName'];?>"  class="input" required>
                                 </div>
                                 <div class="item">
@@ -53,7 +53,7 @@ if (strlen($_SESSION['sessionid']==0))
                                     <input type="email"class="input" value="<?php echo $row['Email'];?>" name="email" required>
                                 </div>
                                 <div class="item">
-                                    <label for="phone">Mobile Number:</label>
+                                    <label for="phone">No.Telepon:</label>
                                     <input type="number"class="input" value="<?php echo $row['MobileNumber'];?>" name="phone" required>
                                 </div>
                                 <div class="item">
@@ -61,7 +61,7 @@ if (strlen($_SESSION['sessionid']==0))
                                     <input type="text"class="input" value="<?php echo $row['Username'];?>" name="username" required>
                                 </div>
                                 <div class="item">
-                                    <label for="idnumber">Id Number:</label>
+                                    <label for="idnumber">ID:</label>
                                     <input type="number"class="input" value="<?php echo $row['ID_Number'];?>" name="idnumber" required>
                                 </div>
                                 <div class="btn-block">

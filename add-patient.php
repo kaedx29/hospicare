@@ -20,15 +20,15 @@ else
                 $name = $_POST['fullname']; 
                 $age = $_POST['age']; 
                 $residence = $_POST['residence']; 
-                $guardian = $_POST['guardian']; 
+                $rhythm = $_POST['rhythm']; 
                 $phone = $_POST['phone'];
                 $bloodgroup = $_POST['bloodgroup'];
                 $gender = $_POST['gender'];
                 $identification = $_POST['identification']; 
 
 
-                $query = "INSERT INTO patients(patient_name,identification,blood,gender,phone,residence,guardian,hospital_id,age) 
-                VALUES('$name','$identification','$bloodgroup','$gender','$phone','$residence','$guardian','$hospitalID','$age')";
+                $query = "INSERT INTO patients(patient_name,identification,blood,gender,phone,residence,rhythm,hospital_id,age) 
+                VALUES('$name','$identification','$bloodgroup','$gender','$phone','$residence','$rhythm','$hospitalID','$age')";
                 $result = mysqli_query($con,$query);
 
                 if(!$result){
@@ -61,7 +61,7 @@ else
                             <input type="text"placeholder="Masukkan Alamat Pasien " name="residence" class="input" required>
                         </div>    
                         <div class="item">    
-                            <input type="text" placeholder="Nama Perawat" name="guardian" class="input" required>                     
+                            <input type="text" placeholder="Rhythm" name="rhythm" class="input" required>                     
                         </div>                                 
                         <div class="item">
                             <input type="number" placeholder="ID Pasien" name="identification" class="input" required>

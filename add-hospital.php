@@ -14,11 +14,11 @@ else
                 if(isset($_POST['add_hospital'])){
                 $name = $_POST['hospitalname']; 
                 $reg_number = $_POST['regnumber']; 
-                $subcounty = $_POST['subcounty']; 
+                $daerah = $_POST['daerah']; 
                 $date = date('Y-m-d');
 
-                $query = "INSERT INTO hospitals(hospital_name,reg_number,subcounty,created_at) 
-                VALUES('$name',' $reg_number',' $subcounty','$date')";
+                $query = "INSERT INTO hospitals(hospital_name,reg_number,daerah,created_at) 
+                VALUES('$name',' $reg_number',' $daerah','$date')";
                 $result = mysqli_query($con,$query);
 
                 if(!$result){
@@ -48,18 +48,15 @@ else
                             <input type="text" placeholder="Registration Number" name="regnumber" class="input" required>
                         </div>
                         <div class="item">
-                            <select name="subcounty" id="input" class="input" required>
-                                <option value="">Subcounty</option>
-                                <option value="rongo">Rongo</option>
-                                <option value="awendo">Awendo</option>
-                                <option value="sunaeast">Suna East</option>
-                                <option value="ntimaru"> Ntimaru</option>
-                                <option value="mabera">Mabera</option>
-                                <option value="kuriawest">Kuria West</option>
-                                <option value="kuriaeast">Kuria East</option>
-                                <option value="nyatike">Nyatike</option>
-                                <option value="sunawest">Suna West</option>
-                                <option value="uriri">Uriri</option>
+                            <select name="daerah" id="input" class="input" required>
+                                <option value="">Daerah</option>
+                                <option value="palembang">Palembang</option>
+                                <option value="ogan ilir">Ogan Ilir</option>
+                                <option value="ogan komering ilir">Ogan Komering Ilir</option>
+                                <option value="ogan komering ulu"> Ogan Komering Ulu</option>
+                                <option value="sekayu">Sekayu</option>
+                                <option value="prabumulih">Prabumulih</option>
+                                <option value="lahat">Lahat</option>
                             </select>              
                         <div class="btn-block">
                             <button type="submit" value="Submit" class="input button" name="add_hospital">Submit</button>                   `

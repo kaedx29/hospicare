@@ -12,11 +12,11 @@ $pdf = new FPDF();
 $pdf-> AddPage();
 $pdf->SetFont('Arial','',10);
 $pdf->Cell(15,8,"S/NO",1);
-$pdf->Cell(42,8,"Name.",1);
+$pdf->Cell(42,8,"Nama.",1);
 $pdf->Cell(28,8,"ID No.",1);
-$pdf->Cell(32,8,"Phone No.",1);
-$pdf->Cell(42,8,"Guardian",1);
-$pdf->Cell(30,8,"Date of Birth",1);
+$pdf->Cell(32,8,"No. Telepon",1);
+$pdf->Cell(42,8,"Rhythm",1);
+$pdf->Cell(30,8,"Usia",1);
 $id = 1;
 while( $row = mysqli_fetch_assoc($res_data)){                
        
@@ -25,17 +25,17 @@ while( $row = mysqli_fetch_assoc($res_data)){
         $bloodgroup = $row['blood'];
         $gender = $row['gender'];
         $phone = $row['phone'];
-        $guardian = $row['guardian'];
+        $rhythm = $row['rhythm'];
         $residence = $row['residence'];
-        $date = $row['dob'];
+        $age = $row['age'];
 
         $pdf->Ln();
         $pdf->Cell(15,8,$id,1,0,'C');
         $pdf->Cell(42,8,$name,1);
         $pdf->Cell(28,8,$identification,1);
         $pdf->Cell(32,8,$phone,1);
-        $pdf->Cell(42,8,$guardian,1);
-        $pdf->Cell(30,8,$date,1);
+        $pdf->Cell(42,8,$rhythm,1);
+        $pdf->Cell(30,8,$age,1);
         $id +=1;
     }
 $pdf->output();

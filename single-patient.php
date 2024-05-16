@@ -33,7 +33,7 @@
                 $phoneNumber = $row['phone'];
                 $idNumber = $row['identification'];
                 $gender = $row['gender'];
-                $guardian = $row['guardian'];
+                $rhythm = $row['rhythm'];
                 $residence = $row['residence'];
                 if($row['status'] ==1){
                     $status = "Active";
@@ -41,41 +41,41 @@
                     $status = "Inactive";
                 }
                 $bloodgroup = $row['blood'];
-                $date = $row['dob'];
+                $age = $row['age'];
             }
         ?>
         <?php include 'includes/header.php';?>
 		<div class="main-content">
 			<div class="title">
-				Patient's Information
+				Informasi Pasien
 			</div>
 			<div class="main"> 
                 <div class="profile">
                     <div class="patient-photo">
                         <div class="profile-image">
                             <img src="assets/images/big.jpg" alt="">
-                            <p> Name:  <?php echo $patientName;  ?></p>
-                            <p>Phone:  <?php echo $phoneNumber;  ?></p>
+                            <p> Nama:  <?php echo $patientName;  ?></p>
+                            <p>No. Telepon:  <?php echo $phoneNumber;  ?></p>
                         </div>
                     </div>
                     <div class="patient-info">
                         <div class="info-one">
-                            <h4>Name: <p><?php echo $patientName;?></p></h4>
-                            <h4>IDNumber: <p><?php echo $idNumber;?></p></h4>
+                            <h4>Nama: <p><?php echo $patientName;?></p></h4>
+                            <h4>ID Pasien: <p><?php echo $idNumber;?></p></h4>
                             <h4>Gender: <p ><?php echo $gender;?></p></h4>
                             <h4>Status:<p style="color: #3bac2c; id="status";> <?php echo $status;?></p></h4>
                         </div>
                         <div class="info-two">                          
-                            <h4>Guardian: <p><?php echo $guardian;?></p></h4>
-                            <h4>Residence:<p> <?php echo $residence?></p></h4>
-                            <h4>DoB: <p><?php echo $date;?></p></h4>
-                            <h4>Bloodgroup:<p><?php echo $bloodgroup;?></p></h4>
+                            <h4>Rhythm: <p><?php echo $rhythm;?></p></h4>
+                            <h4>Alamat:<p> <?php echo $residence?></p></h4>
+                            <h4>Usia: <p><?php echo $age;?></p></h4>
+                            <h4>Golongan Darah:<p><?php echo $bloodgroup;?></p></h4>
                         </div>
                     </div>
                 </div>
                 <div class="info-header">
                     <ul>
-                        <li><p><?php echo $patientName?>'s  Medical History</p></li> 
+                        <li><p><?php echo $patientName?> Rekam Medis</p></li> 
                         <li ><a href="record-visit.php?patient_id=<?php echo $patient_id?>" class="right"> <button>Record</button> </a></li>
                         <li><button  onclick="changeStatus()">Discharge</button> </a></li>
                         <script>
@@ -99,11 +99,11 @@
                 <table class="table">
                     <thead>
                         <th>#</th>
-                        <th>Date Admited</th>
-                        <th>Diagnosed With</th>
-                        <th>Hospital Admitted</th>
-                        <th>Medication</th>
-                        <th>Date Discharged</th>
+                        <th>Tanggal</th>
+                        <th>Eletric Axis of the Heart</th>
+                        <th>Rumah Sakit</th>
+                        <th>Hypertrophies</th>
+                        <th>Tanggal Kepulangan</th>
                     </thead>
                     <tbody>   
                         <?php 
@@ -128,18 +128,18 @@
                             $hsresult = mysqli_query($con,$hssql);
                             $hsRow = mysqli_fetch_assoc($hsresult);
                             $hsname = $hsRow['hospital_name'];
-                            $medicine = $row['drugs'];
-                            $disease = $row['diagnosed_with'];
+                            $hypertrophies = $row['hypertrophies'];
+                            $rhythm = $row['rhythm'];
                             $date2 = $row['date_discharged'];
                             $count+= 1;                                                
                         ?>                    
                         <tr>
                             <td data-label="Serial"><?php echo $count;?></td>
-                            <td data-label="Date Admitted"><?php echo $date1; ?></td>
-                            <td data-label="Disease"><?php echo $disease; ?></td>
-                            <td data-label="Hospital"><?php echo $hsname; ?></td>
-                            <td data-label="Medicine"><?php echo $medicine; ?></td>
-                            <td data-label="Date Discharged"><?php echo $date2; ?></td>
+                            <td data-label="Tanggal"><?php echo $date1; ?></td>
+                            <td data-label="Rhythm"><?php echo $rhythm; ?></td>
+                            <td data-label="Rumah Sakit"><?php echo $hsname; ?></td>
+                            <td data-label="Pypertrophies"><?php echo $hypertrophies; ?></td>
+                            <td data-label="Tanggal Kepulangann"><?php echo $date2; ?></td>
                         </tr> 
                         <?php }?>                       
                     </tbody>  
